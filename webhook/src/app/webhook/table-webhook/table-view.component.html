@@ -1,0 +1,64 @@
+<h1 class="title">Consultar WebHooks</h1>
+
+<app-filter (newSearch)="listWebhookSearch($event)"></app-filter>
+
+<mat-card id="table-mat-card">
+  <div class="title-line">
+      <mat-card-title>WebHooks</mat-card-title>
+      <button mat-raised-button class="btn-purple btn-create" [routerLink]="[{outlets: {webhook: 'webhook/create'} }]">
+        <i class="material-icons">add</i>
+        Novo WebHook
+      </button>
+  </div>
+  <div class="table-webhook">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <!-- Position Column -->
+          <ng-container matColumnDef="userId">
+            <th mat-header-cell *matHeaderCellDef> User ID </th>
+            <td mat-cell *matCellDef="let row"> {{ row.userId }} </td>
+          </ng-container>
+        
+          <!-- Name Column -->
+          <ng-container matColumnDef="userName">
+            <th mat-header-cell *matHeaderCellDef> User Name </th>
+            <td mat-cell *matCellDef="let row"> {{ row.userName }} </td>
+          </ng-container>
+        
+          <!-- Weight Column -->
+          <ng-container matColumnDef="webhookUrl">
+            <th mat-header-cell *matHeaderCellDef> Webhook URL </th>
+            <td mat-cell *matCellDef="let row"> {{ row.webhookUrl }} </td>
+          </ng-container>
+        
+        <!-- Action Column -->
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef>Ações</th>
+          <td mat-cell *matCellDef="let row">
+              <a [routerLink]="[{outlets: {webhook: ['update', row.id]} }]">
+                  <i class="material-icons edit">
+                      edit    
+                  </i>
+              </a>
+              <a [routerLink]="[{outlets: {webhook: ['delete', row.id]} }]">
+                  <i class="material-icons delete">
+                      delete
+                  </i>
+              </a>
+          </td>
+        </ng-container>
+        
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+
+      <mat-paginator #paginator
+        [pageIndex]="0"
+        [pageSize]="5"
+        [pageSizeOptions]="[5, 10, 20]"
+        aria-label="Select page">
+      </mat-paginator>
+  
+    </div>
+  
+</mat-card>

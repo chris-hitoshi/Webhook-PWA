@@ -1,0 +1,22 @@
+<mat-card id="filter-mat-card">
+    <mat-card-title class="title">Filtrar</mat-card-title>
+    <hr />
+    <div class="div-campos">
+        <div class="user-id">
+            <h5>User ID:</h5>
+            <input type="text" class="ipt-userid" [(ngModel)]="userid">
+        </div>
+    </div>
+    <div class="div-botoes">
+        <button mat-stroked-button class="btn-clear"
+        (click)="clear()">
+            <i class="material-icons">clear</i>
+            Limpar
+        </button>
+        <button mat-raised-button class="btn-search btn-purple"
+        (click)="search()">
+            <i class="material-icons">search</i>
+            Pesquisar
+        </button>
+    </div>
+</mat-card>

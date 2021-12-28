@@ -1,0 +1,60 @@
+<h1>Novo Webhook</h1>
+<mat-card>
+    <mat-card-title>
+        Criar novo Webhook
+    </mat-card-title>
+
+    <form action="">
+        <mat-form-field class="user-name">
+            <mat-label>User Name:</mat-label>
+            <input matInput matNativeControl 
+            [(ngModel)]="webhook.userName" name="userName" required>
+        </mat-form-field>
+        <mat-form-field class="user-id">
+            <mat-label>User ID:</mat-label>
+            <input matInput matNativeControl
+            [(ngModel)]="webhook.userId" name="userId" required>
+        </mat-form-field>
+        <mat-form-field class="webhook-url">
+            <mat-label>WebHook URL:</mat-label>
+            <input matInput matNativeControl required
+            [(ngModel)]="webhook.webhookUrl" name="webhookUrl">
+        </mat-form-field>
+        <mat-form-field class="jwt-url">
+            <mat-label>JWT URL:</mat-label>
+            <input matInput matNativeControl required
+            [(ngModel)]="webhook.jwtUrl" name="jwtUrl">
+        </mat-form-field>
+        <mat-form-field class="client-id">
+            <mat-label>Client ID:</mat-label>
+            <input matInput [(ngModel)]="webhook.clientId" name="clientId">
+        </mat-form-field>
+        <mat-form-field class="client-secret">
+            <mat-label>Client Secret:</mat-label>
+            <input matInput [(ngModel)]="webhook.clientSecret" name="clientSecret">
+        </mat-form-field>
+        <mat-form-field class="client-audience">
+            <mat-label>Client Audiece:</mat-label>
+            <input matInput [(ngModel)]="webhook.clientAudience" name="clientAudience">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Tipo de autenticação:</mat-label>
+            <mat-select matNativeControl required
+            [(ngModel)]="webhook.authenticationType" name="authenticationType">
+              <mat-option value="basic">Basic Authentication</mat-option>
+              <mat-option value="OAuth">OAuth Authentication</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </form>
+
+    <div class="div-botoes">
+        <button mat-stroked-button class="btn-cancel"
+        (click)="cancel()">Cancelar</button>
+        <button mat-raised-button class="btn-create btn-purple"
+        (click)="createWebhook()">
+        <i class="material-icons">add_circle_outline</i>
+        Criar
+        </button>
+    </div>
+
+</mat-card>

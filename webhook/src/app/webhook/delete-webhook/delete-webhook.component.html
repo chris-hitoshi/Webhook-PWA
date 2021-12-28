@@ -1,0 +1,52 @@
+<h1>Deletar Webhook</h1>
+<mat-card>
+    <mat-card-title>
+        Deletar Webhook {{ webhook.webhookUrl }}
+    </mat-card-title>
+
+    <form action="">
+        <mat-form-field class="user-name">
+            <mat-label>User Name:</mat-label>
+            <input matInput [value]="webhook.userName" disabled>
+        </mat-form-field>
+        <mat-form-field class="user-id">
+            <mat-label>User ID:</mat-label>
+            <input matInput [value]="webhook.userId" disabled>
+        </mat-form-field>
+        <mat-form-field class="webhook-url">
+            <mat-label>WebHook URl:</mat-label>
+            <input matInput [value]="webhook.webhookUrl" disabled>
+        </mat-form-field>
+        <mat-form-field class="jwt-url">
+            <mat-label>JWT URL:</mat-label>
+            <input matInput [value]="webhook.jwtUrl" disabled>
+        </mat-form-field>
+        <mat-form-field class="client-id">
+            <mat-label>Client ID:</mat-label>
+            <input matInput [value]="webhook.clientId" disabled>
+        </mat-form-field>
+        <mat-form-field class="client-secret">
+            <mat-label>Client Secret:</mat-label>
+            <input matInput [value]="webhook.clientSecret" disabled>
+        </mat-form-field>
+        <mat-form-field class="client-audience">
+            <mat-label>Client Audiece:</mat-label>
+            <input matInput [value]="webhook.clientAudience" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Tipo de autenticação:</mat-label>
+            <input matInput [value]="webhook.authenticationType" disabled>
+        </mat-form-field>
+    </form>
+
+    <div class="div-botoes">
+        <button mat-stroked-button class="btn-cancel"
+        (click)="cancel()">Cancel</button>
+        <button mat-raised-button class="btn-delete btn-red"
+        (click)="deleteWebhook()">
+        <i class="material-icons">delete</i>
+        Deletar
+        </button>
+    </div>
+
+</mat-card>

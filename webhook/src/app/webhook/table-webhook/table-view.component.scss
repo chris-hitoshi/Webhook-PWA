@@ -1,0 +1,47 @@
+h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #6F2C91;
+    margin: 25px 0;
+}
+
+.title-line{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table-webhook{
+    margin: 20px 0;
+}
+
+table{
+    width: 100%;
+}
+
+    th{
+        font-weight: 600;
+        background-color: #6f2c91;
+        color: white;
+    }
+
+    td{
+        max-width: 100%;
+    }
+
+    table i{
+        color: white;
+        margin-right: 3px;
+        padding: 2px;
+        border-radius: 3px;
+    }
+
+.edit{
+    background-color: green;
+}
+
+.delete{
+    background-color:red;
+}

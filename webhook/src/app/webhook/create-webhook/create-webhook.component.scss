@@ -1,0 +1,64 @@
+$medium-width: 40vw;
+$full-width: 82vw;
+
+h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #6F2C91;
+    margin: 50px 0;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2vw;
+    margin-top: 20px;
+}
+
+    .user-name{
+        width: $medium-width;
+    }
+
+    .user-id{
+        width: $medium-width;
+    }
+
+    .webhook-url{
+        width: $full-width;
+    }
+
+    .jwt-url{
+        width: $full-width;
+    }
+
+    .client-id{
+        width: $medium-width;
+    }
+
+    .client-secret{
+        width: $medium-width;
+    }
+
+    .client-audience{
+        width: $medium-width;
+    }
+
+.div-botoes{
+    display: flex;
+    justify-content: flex-end;
+}
+
+    .btn-cancel{
+        font-family: 'Montserrat', sans-serif;
+        font-size: .9rem;
+        font-weight: 300;
+        background-color: transparent;
+        width: 90px;
+        margin-right: 20px;
+    }
+
+    .btn-create{
+        width: 100px;
+    }
+
