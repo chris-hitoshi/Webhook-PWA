@@ -17,7 +17,7 @@ export class WebhookService {
   constructor(
     private snackBar: MatSnackBar,
     private http: HttpClient,
-    private router: Router,
+    private router: Router
   ) { }
 
   showMessage(msg: string, isError: Boolean = false): void {

@@ -7,8 +7,8 @@
     input{
         height: 20px;
         min-width: 5vw;
-        max-width: 70vw;
-        width: 70vw;
+        max-width: 80vw;
+        width: 80vw;
     }
 
     h5{
@@ -34,4 +34,20 @@
 
 #filter-mat-card{
     margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 600px)
+{
+    h1{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    mat-card-title{
+        font-size: 1.3rem;
+    }
+    .div-botoes{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
 }
